@@ -50,6 +50,8 @@ namespace LaboratorioValidacion_GomezPedro
             int nuevoSueldo = 0;
             //Sueldo en int
             int sueldo = 0;
+            //Regex para letras
+            Regex r = new Regex("^[a-zA-Z\\s]*$");
             //######################################
             //-VERIFICACION Y PROCEDIMIENTO-
             //######################################
@@ -64,37 +66,47 @@ namespace LaboratorioValidacion_GomezPedro
                 MessageBox.Show("Por favor ingresar un nombre valido.");
                 return;
             }
-            
+            else
             if (nombreTrabajador.Text.Trim().Length == 0)
             {
                 MessageBox.Show("El nombre del trabajador no debe estar vacio. Por favor ingresar el nombre.");
                 return;
             }
+            else
             //Creamos un if para que verifique si hay algo escrito en el programa principal
-            Regex r = new Regex("^[a-zA-Z\\s]*$");
             if (saldoTrabajador.Text.Trim().Length == 0)
             {
                 MessageBox.Show("El sueldo del trabajador no debe estar vacio. Por favor ingresar el sueldo.");
                 return;
             }
+            else
             if (!r.IsMatch(saldoTrabajador.Text))
             {
                 MessageBox.Show("El nombre del encuestado sólo debe tener caracteres alfabéticos ");
                 saldoTrabajador.Focus();
             }
-            sueldo =Convert.ToInt32(saldoTrabajador.Text);
-
+       
+            else
+            sueldo = Convert.ToInt32(saldoTrabajador.Text);
             //Creamos un if y then para que ingrese algun valor
             if (sueldo <0)
             {
                 MessageBox.Show("Por favor ingrese un valor positivo.");
                 return;
             }
+            else
             //Creamos un if y then para que calcule el sueldo
             if (sueldo==dosSub)
             {
                sueldo = nuevoSueldo;
-               MessageBox.Show("El sueldo del trabajador queda como:${0}");
+               MessageBox.Show("El sueldo del trabajador queda como:$",sueldo);
+            }
+            else
+            //Creamos formula para imprimir nuevo sueldo
+                if(sueldo<smlm)
+            {
+                nuevoSueldo = sueldo * smlm;
+                MessageBox.Show("El sueldo es:",nuevoSueldo);
             }
 
         }
