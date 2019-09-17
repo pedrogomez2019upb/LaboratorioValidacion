@@ -1,4 +1,7 @@
-﻿using System;
+﻿//######################################
+//-LABORATORIO VALIDACION-
+//######################################
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +15,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+//using System.Windows.Forms;
 
+//######################################
+//-CREACION INTERFAZ-
+//######################################
+//Por Primera instancia creamos la interfaz grafica para el uso del programa
 namespace LaboratorioValidacion_GomezPedro
 {
     /// <summary>
@@ -24,5 +32,13 @@ namespace LaboratorioValidacion_GomezPedro
         {
             InitializeComponent();
         }
+
+        private void BotonCalcular_Click(object sender, RoutedEventArgs e)
+        {
+
+
+
+        }
     }
 }
+//Desarrollado por Pedro Gomez / ID:000396221

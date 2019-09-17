@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LaboratorioValidacion_GomezPedro"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="450" Width="215.517">
+    <Grid Margin="0,0,4.5,0.5">
+        <Label x:Name="labelTitulo" Content="Generador de pagos" HorizontalAlignment="Left" Margin="29,6,-47,0" VerticalAlignment="Top" FontSize="16" Width="224"/>
+        <Label x:Name="labelNombre" Content="Nombre:" HorizontalAlignment="Left" Margin="62,32,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="nombreTrabajador" HorizontalAlignment="Left" Height="24" Margin="42,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelSaldo" Content="Saldo:" HorizontalAlignment="Left" Margin="73,106,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="saldoTrabajador" HorizontalAlignment="Left" Height="22" Margin="42,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelDescripcionSaldo" Content="Ingresar saldo como numero entero," HorizontalAlignment="Left" Margin="3,140,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label x:Name="labelDescripcionSaldo2" Content="sin comas ni puntos." HorizontalAlignment="Left" Margin="42,160,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelResultado" Content="" HorizontalAlignment="Left" Margin="72,252,0,0" VerticalAlignment="Top" Width="59"/>
+        <Button x:Name="botonCalcular" Content="Calcular Auxilio de Transporte" HorizontalAlignment="Left" Margin="14,321,0,0" VerticalAlignment="Top" Width="174" Height="40" Click="BotonCalcular_Click"/>
+        <Button x:Name="botonCerrar" Content="Cerrar" HorizontalAlignment="Left" Margin="66,379,0,0" VerticalAlignment="Top" Width="76"/>
+
     </Grid>
 </Window>
