@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 //using System.Windows.Forms;
 
 //######################################
@@ -41,13 +42,60 @@ namespace LaboratorioValidacion_GomezPedro
             //Al momento de crear el boton , este nos crea un
             //espacio para poner los comandos correspondientes
             //Primero creamos el SMLM
-            float smlm = 828116;
+            int smlm = 828116;
             //Creamos el subsidio
-            float subsidio = 97032;
+            int subsidio = 97032;
+            int dosSub = subsidio * 2;
             //Creamos el nuevo sueldo
-            float nuevoSueldo = 0;
+            int nuevoSueldo = 0;
+            //Sueldo en int
+            int sueldo = 0;
+            //######################################
+            //-VERIFICACION Y PROCEDIMIENTO-
+            //######################################
+            //Para los procedimientos matematicos es necesario
+            //hacer unas condicionales, pues estas deciden que
+            //hacer de acuerdo al saldo ingresado.
+            //
+            //Primero creamos un if y then para la caja de texto(nombre)
+            int parsedValue;
+            if (!int.TryParse(nombreTrabajador.Text, out parsedValue))
+            {
+                MessageBox.Show("Por favor ingresar un nombre valido.");
+                return;
+            }
+            
+            if (nombreTrabajador.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("El nombre del trabajador no debe estar vacio. Por favor ingresar el nombre.");
+                return;
+            }
+            //Creamos un if para que verifique si hay algo escrito en el programa principal
+            Regex r = new Regex("^[a-zA-Z\\s]*$");
+            if (saldoTrabajador.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("El sueldo del trabajador no debe estar vacio. Por favor ingresar el sueldo.");
+                return;
+            }
+            if (!r.IsMatch(saldoTrabajador.Text))
+            {
+                MessageBox.Show("El nombre del encuestado sólo debe tener caracteres alfabéticos ");
+                saldoTrabajador.Focus();
+            }
+            sueldo =Convert.ToInt32(saldoTrabajador.Text);
 
-
+            //Creamos un if y then para que ingrese algun valor
+            if (sueldo <0)
+            {
+                MessageBox.Show("Por favor ingrese un valor positivo.");
+                return;
+            }
+            //Creamos un if y then para que calcule el sueldo
+            if (sueldo==dosSub)
+            {
+               sueldo = nuevoSueldo;
+               MessageBox.Show("El sueldo del trabajador queda como:${0}");
+            }
 
         }
 
