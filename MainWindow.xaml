@@ -16,7 +16,7 @@
         <Label x:Name="labelDescripcionSaldo2" Content="sin comas ni puntos." HorizontalAlignment="Left" Margin="42,160,0,0" VerticalAlignment="Top"/>
         <Label x:Name="labelResultado" Content="" HorizontalAlignment="Left" Margin="72,252,0,0" VerticalAlignment="Top" Width="59"/>
         <Button x:Name="botonCalcular" Content="Calcular Auxilio de Transporte" HorizontalAlignment="Left" Margin="14,321,0,0" VerticalAlignment="Top" Width="174" Height="40" Click="BotonCalcular_Click"/>
-        <Button x:Name="botonCerrar" Content="Cerrar" HorizontalAlignment="Left" Margin="66,379,0,0" VerticalAlignment="Top" Width="76"/>
+        <Button x:Name="botonCerrar" Content="Cerrar" HorizontalAlignment="Left" Margin="66,379,0,0" VerticalAlignment="Top" Width="76" Click="BotonCerrar_Click"/>
 
     </Grid>
 </Window>

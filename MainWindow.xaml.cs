@@ -36,7 +36,7 @@ namespace LaboratorioValidacion_GomezPedro
         private void BotonCalcular_Click(object sender, RoutedEventArgs e)
         {
             //######################################
-            //-CREACION BOTON CALCULAR
+            //-CREACION BOTON CALCULAR-
             //######################################
             //Al momento de crear el boton , este nos crea un
             //espacio para poner los comandos correspondientes
@@ -48,6 +48,16 @@ namespace LaboratorioValidacion_GomezPedro
             float nuevoSueldo = 0;
 
 
+
+        }
+
+        private void BotonCerrar_Click(object sender, RoutedEventArgs e)
+        {
+            //######################################
+            //-CREACION BOTON CERRAR-
+            //######################################
+            //Creamos el comando para salir
+            System.Windows.Application.Current.Shutdown();
         }
     }
 }
