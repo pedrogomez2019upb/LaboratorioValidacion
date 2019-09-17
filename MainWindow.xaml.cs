@@ -35,7 +35,17 @@ namespace LaboratorioValidacion_GomezPedro
 
         private void BotonCalcular_Click(object sender, RoutedEventArgs e)
         {
-
+            //######################################
+            //-CREACION BOTON CALCULAR
+            //######################################
+            //Al momento de crear el boton , este nos crea un
+            //espacio para poner los comandos correspondientes
+            //Primero creamos el SMLM
+            float smlm = 828116;
+            //Creamos el subsidio
+            float subsidio = 97032;
+            //Creamos el nuevo sueldo
+            float nuevoSueldo = 0;
 
 
         }
